@@ -35,6 +35,6 @@ jobs:
           region: 'ap-south-1'
           application_name: 'arvind-angular-frontend'
           environment_name: 'Arvind-angular-frontend-env'
-          version_label: 'v${{ github.run_number }}'
-          # deployment_package: 'angular-app.zip'
+          version_label: ${{ github.sha }}
+          deployment_package: 'angular-app.zip'
 
