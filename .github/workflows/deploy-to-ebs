@@ -37,8 +37,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: your-app-name  # Replace with your app name
-          environment_name: your-env-name  # Replace with your environment name
-          region: us-east-1  # Change to your desired AWS region
+          application_name: arvind-angular-frontend  # Replace with your app name
+          environment_name: Arvind-angular-frontend-env  # Replace with your environment name
+          region: ap-south-1  # Change to your desired AWS region
           version_label: ${{ github.sha }}  # Optional version label
 
