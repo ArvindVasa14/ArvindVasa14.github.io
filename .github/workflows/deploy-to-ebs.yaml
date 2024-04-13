@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: showing id secrets
+        run: echo "key id= ${{ secrets.AWS_ACCESS_KEY_ID }}"
+
+      - name: showing pass secrets
+        run: echo "key id= ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+
       - name: Use AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
