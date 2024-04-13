@@ -36,5 +36,5 @@ jobs:
           application_name: 'arvind-angular-frontend'
           environment_name: 'Arvind-angular-frontend-env'
           version_label: 'v${{ github.run_number }}'
-          deployment_package: 'angular-app.zip'
+          # deployment_package: 'angular-app.zip'
 
