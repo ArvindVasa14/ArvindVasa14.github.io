@@ -1,0 +1,44 @@
+name: Deploy to Elastic Beanstalk
+
+on:
+  push:
+    branches: [ main ] 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: us-east-1  # Change to your desired AWS region
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build for production
+        run: ng build --prod
+
+      - name: Zip application files
+        run: zip -r deploy.zip dist package.json
+
+      - name: Deploy to Elastic Beanstalk
+        uses: einaregilsson/beanstalk-deploy@v3
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: your-app-name  # Replace with your app name
+          environment_name: your-env-name  # Replace with your environment name
+          region: us-east-1  # Change to your desired AWS region
+          version_label: ${{ github.sha }}  # Optional version label
+
