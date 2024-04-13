@@ -28,6 +28,9 @@ export class HomeComponent implements OnInit {
     new MyLatestProjects('assets/RecommendationEngine.png', '2022-04-20', 'Project 1', 'Description of the project.'),
     new MyLatestProjects('assets/bert.jpeg', '2022-04-20', 'Project 2', 'Description of the project.'),
     new MyLatestProjects('assets/RecommendationEngine.png', '2022-04-20', 'Project 1', 'Description of the project.'),
+    new MyLatestProjects('assets/bert.jpeg', '2022-04-20', 'Project 2', 'Description of the project.'),
+    new MyLatestProjects('assets/bert.jpeg', '2022-04-20', 'Project 2', 'Description of the project.'),
+    new MyLatestProjects('assets/RecommendationEngine.png', '2022-04-20', 'Project 1', 'Description of the project.'),
     new MyLatestProjects('assets/bert.jpeg', '2022-04-20', 'Project 2', 'Description of the project.')
   
   ]
