@@ -1,0 +1,63 @@
+.simple-bio{
+
+}
+.about{
+    padding-top: 3%;
+    display: flex;
+    align-items: center;
+}
+.my-image{
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 550px;
+    height: 550px;
+    /* position: relative;
+    transform: translate(70%, -50%); */
+}
+.name{
+    font-size: x-large;
+}
+.intrests-cards
+{
+    display: flex;
+    flex-direction: row;
+}
+.intrests-card{
+    padding: 10px;
+}
+.my-description{
+    color: grey;
+}
+
+.project-cards
+{
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+
+.project-card{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.heading-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.heading-tag{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: grey;
+    padding-bottom: 50px;
+}
+
+.gap-div{
+    padding: 40px;
+}

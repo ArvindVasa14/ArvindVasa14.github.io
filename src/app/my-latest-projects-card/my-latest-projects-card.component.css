@@ -1,0 +1,13 @@
+.project-image{
+    width: 200px;
+    height: 150px;
+}
+.project-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project-description{
+    color: grey;
+}

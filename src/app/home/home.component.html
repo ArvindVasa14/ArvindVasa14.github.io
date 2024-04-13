@@ -1,0 +1,44 @@
+<div class="about row">
+    <div class="simple-bio col-md-6">
+        <div style="color: grey">I am</div>
+        <h2 class="name">Vasa Venkata Aravind</h2>
+        <p class="my-description">Machine learning engineer adept at designing and implementing innovative
+          algorithms for data-driven solutions.</p>
+    </div>
+      
+      <img class="my-image" src="assets\1694719737741.jpeg" alt="arvind image" />
+</div>
+
+<div class="gap-div"></div>
+
+<!-- AREA OF INTRESTS -->
+<h3 class="heading-line" id="areas-of-intrests">Areas of Intrest </h3>
+<p class="heading-tag">Take a look at some of the things I love working on</p>
+
+
+<div class="intrests-cards row">
+<app-area-of-intrest-card class="intrests-card col-md-5 col-lg-4"
+  *ngFor="let intrest of areasOfIntrests"
+  [technologyImageurl]="intrest.technologyImageUrl"
+  [technologyName]="intrest.technologyName"
+  [technologyDescription]="intrest.technologyDescription"
+>
+</app-area-of-intrest-card>
+</div>
+
+
+<div class="gap-div"></div>
+
+
+<!-- MY LATEST PROJECTS -->
+<h3 class="heading-line" id="lastest-projects">My Latest Projects</h3>
+<p class="heading-tag">Take a look at my recent work</p>
+<div class="project-cards row">
+  <app-my-latest-projects-card class="project-card col-md-5 col-lg-4"
+    *ngFor="let project of myLatestProjects"
+    [projectImageUrl]="project.projectImageUrl"
+    [projectDate]="project.projectDate"
+    [projectHeading]="project.projectHeading"
+    [projectDescription]="project.projectDescription"
+  ></app-my-latest-projects-card>
+</div>
