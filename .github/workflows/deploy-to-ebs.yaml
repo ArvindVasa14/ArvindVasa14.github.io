@@ -30,7 +30,7 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build for production
-        run: ng build --prod
+        run: ng build
 
       - name: Zip application files
         run: zip -r deploy.zip dist package.json
