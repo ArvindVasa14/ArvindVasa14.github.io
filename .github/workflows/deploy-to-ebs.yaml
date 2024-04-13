@@ -17,6 +17,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1  # Change to your desired AWS region
+          region: ap-south-1
 
       - name: Install Node.js
         uses: actions/setup-node@v2
@@ -43,5 +44,6 @@ jobs:
           application_name: arvind-angular-frontend  # Replace with your app name
           environment_name: Arvind-angular-frontend-env  # Replace with your environment name
           aws-region: ap-south-1  # Change to your desired AWS region
+          region: ap-south-1
           version_label: ${{ github.sha }}  # Optional version label
 
