@@ -1,48 +1,48 @@
-name: Deploy to Elastic Beanstalk
+# name: Deploy to Elastic Beanstalk
 
-on:
-  push:
-    branches: [ main ] 
+# on:
+#   push:
+#     branches: [ main ] 
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+#     steps:
+#       - uses: actions/checkout@v2
 
-      - name: Use AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          # aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1  # Change to your desired AWS region
+#       - name: Use AWS credentials
+#         uses: aws-actions/configure-aws-credentials@v1
+#         with:
+#           # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           # aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           aws-region: ap-south-1  # Change to your desired AWS region
 
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
+#       - name: Install Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install dependencies
+#         run: npm install
 
-      - name: Build for production
-        run: ng build --prod
+#       - name: Build for production
+#         run: ng build --prod
 
-      - name: Zip application files
-        run: zip -r deploy.zip dist package.json
+#       - name: Zip application files
+#         run: zip -r deploy.zip dist package.json
 
-      - name: Deploy to Elastic Beanstalk
-        uses: einaregilsson/beanstalk-deploy@v22
-        with:
-          # aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          # aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: arvind-angular-frontend  # Replace with your app name
-          environment_name: Arvind-angular-frontend-env  # Replace with your environment name
-          aws-region: ap-south-1  # Change to your desired AWS region
-          version_label: ${{ github.sha }}  # Optional's version label
+#       - name: Deploy to Elastic Beanstalk
+#         uses: einaregilsson/beanstalk-deploy@v22
+#         with:
+#           # aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           # aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           application_name: arvind-angular-frontend  # Replace with your app name
+#           environment_name: Arvind-angular-frontend-env  # Replace with your environment name
+#           aws-region: ap-south-1  # Change to your desired AWS region
+#           version_label: ${{ github.sha }}  # Optional's version label
 
