@@ -1,0 +1,28 @@
+name: Build Angular Project
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger the build on
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'  # Specify the Node.js version you are using
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
+    - name: Build Angular project
+      run: ng build --output-path docs --base-href
