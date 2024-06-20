@@ -1,0 +1,17 @@
+.contact_us{
+    position: relative;
+    background-color: rgb(220, 32, 32);
+    width: 100%;
+    height: 250px;
+    z-index: 0;
+    box-shadow: 0px -3px 10px 0px rgba(96, 95, 95, 0.5);
+      
+      
+}
+
+.text{
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    color: white;
+}

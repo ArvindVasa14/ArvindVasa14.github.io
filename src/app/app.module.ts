@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {MatButtonModule} from '@angular/material/button';
 import { PdfDownloadService } from './pdf-download-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     AreaOfIntrestCardComponent,
     MyLatestProjectsCardComponent,
     NavbarComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
