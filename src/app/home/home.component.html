@@ -1,9 +1,17 @@
+<!-- <img class="background-image" src="assets\RecommendationEngine.png" alt="img"> -->
+<h2 class="nav">Portfolio</h2>
+<li class="menu col-md-12">
+  <a href="#areas-of-intrests" style="text-decoration: none;"><option value="intrests">Intrests</option></a>
+  <a href="#lastest-projects" style="text-decoration: none;"><option value="projects">Projects</option></a>
+  <option value="resume" (click)="downloadPdf()">Resume</option>
+</li>
+
+
 <div class="about row">
     <div class="simple-bio col-md-6">
-        <div style="color: grey">I am</div>
+        <div style="color: rgb(215, 214, 214)">Hello, I am</div>
         <h2 class="name">Vasa Venkata Aravind</h2>
-        <p class="my-description">Machine learning engineer adept at designing and implementing innovative
-          algorithms for data-driven solutions.</p>
+        <p class="my-description">Experienced professional in the field of AIML, I have been working in this domain for more than 2 years constantly updating with this fast paced domain. My majority of the work deals with NLP. currently working at Virtusa as AI engineer exploring the depths of AI and enhancing my skillset everyday. providing buissiness solutions with AI. </p>
     </div>
       
       <img class="my-image" src="assets\1694719737741.jpeg" alt="arvind image" />
@@ -17,7 +25,7 @@
 
 
 <div class="intrests-cards row">
-<app-area-of-intrest-card class="intrests-card col-md-5 col-lg-4"
+<app-area-of-intrest-card class="intrests-card col-md-5 col-lg-4" id="areas-of-intrests"
   *ngFor="let intrest of areasOfIntrests"
   [technologyImageurl]="intrest.technologyImageUrl"
   [technologyName]="intrest.technologyName"
@@ -40,5 +48,6 @@
     [projectDate]="project.projectDate"
     [projectHeading]="project.projectHeading"
     [projectDescription]="project.projectDescription"
+    [projectUrl]="project.projectUrl"
   ></app-my-latest-projects-card>
 </div>

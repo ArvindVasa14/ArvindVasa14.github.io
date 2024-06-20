@@ -13,6 +13,6 @@ export class PdfDownloadService {
 
   downloadPdf(): Observable<Blob> {
     // Replace 'assets/sample.pdf' with the path to your PDF file in the assets folder
-    return this.http.get('assets/vasa venkata aravind-V7.pdf', { responseType: 'blob' });
+    return this.http.get('assets/vasa venkata aravind resume v11.pdf', { responseType: 'blob' });
   }
 }

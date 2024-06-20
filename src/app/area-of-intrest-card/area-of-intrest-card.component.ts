@@ -14,7 +14,7 @@ export class AreaOfIntrestCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("I am Loggin",this.technologyName)
+    // console.log("I am Loggin",this.technologyName)
   }
 
 }

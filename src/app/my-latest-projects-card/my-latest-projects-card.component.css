@@ -7,6 +7,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.project-card:hover{
+    scale: 1.05;
+    transition-duration: 0.2s;
 }
 .project-description{
     color: grey;

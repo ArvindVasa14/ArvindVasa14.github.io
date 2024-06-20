@@ -1,11 +1,7 @@
-.simple-bio{
+body{
+    background-color: rgb(230, 134, 9);
+}
 
-}
-.about{
-    padding-top: 3%;
-    display: flex;
-    align-items: center;
-}
 .my-image{
     padding-top: 10px;
     padding-left: 15px;
@@ -15,6 +11,7 @@
     transform: translate(70%, -50%); */
 }
 .name{
+    color: white;
     font-size: x-large;
 }
 .intrests-cards
@@ -26,7 +23,7 @@
     padding: 10px;
 }
 .my-description{
-    color: grey;
+    color: rgb(217, 214, 214);
 }
 
 .project-cards
@@ -61,3 +58,38 @@
 .gap-div{
     padding: 40px;
 }
+
+.menu{
+    justify-content: left;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-left: 180px;
+}
+
+.menu option{
+    padding-right: 60px;
+    padding-top: 23px;
+    color: rgb(240, 237, 237);
+    transition-duration: 0.2s;
+}
+.menu option:hover{
+    /* font-weight: bold; */
+    scale: 1.1;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.nav{
+    position: absolute;
+    color: white;
+    padding-top: 17px;
+}
+
+.about{
+    padding-top: 3%;
+    display: flex;
+    align-items: center;
+    
+}
+
+

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-latest-projects-card',
@@ -11,11 +12,19 @@ export class MyLatestProjectsCardComponent implements OnInit {
   @Input() projectDate:string;
   @Input() projectHeading:string;
   @Input() projectDescription:string;
+  @Input() projectUrl:string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log("I am Logging",this.projectHeading)
+    console.log(this.projectHeading)
+    console.log(this.projectUrl)
+  }
+
+  redirect(url:string){
+    console.log(url)
+    window.location.href= url
+    // this.router.navigateByUrl(url)
   }
 
 }
