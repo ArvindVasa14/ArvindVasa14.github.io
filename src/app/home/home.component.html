@@ -1,18 +1,39 @@
 <!-- <img class="background-image" src="assets\RecommendationEngine.png" alt="img"> -->
-<h2 class="nav">Portfolio</h2>
-<li class="menu col-md-12">
-  <a href="#areas-of-intrests" style="text-decoration: none;"><option value="intrests">Intrests</option></a>
-  <a href="#lastest-projects" style="text-decoration: none;"><option value="projects">Projects</option></a>
-  <option value="resume" (click)="downloadPdf()">Resume</option>
-</li>
+<!-- <h2 class="nav">Portfolio</h2> -->
 
+<ul class="list-unstyled   menu">
+  <li class="mb-2 mb-md-0 list button">
+    <button  class="btn btn-link p-0 " (click)="downloadPdf()"  style="text-decoration: none;">
+      Resume
+    </button>
+  </li>
+  <li class="mb-2 mb-md-0 list">
+    <a href="#areas-of-intrests"  style="text-decoration: none;">
+      Interests
+    </a>
+  </li>
+  <li class="mb-2 mb-md-0 list">
+    <a href="#lastest-projects"  style="text-decoration: none;">
+      Projects
+    </a>
+  </li>
+  
+</ul>
 
 <div class="about row">
     <div class="simple-bio col-md-6">
         <div style="color: rgb(215, 214, 214)">Hello, I am</div>
         <h2 class="name">Vasa Venkata Aravind</h2>
         <p class="my-description">Experienced professional in the field of AIML, I have been working in this domain for more than 2 years constantly updating with this fast paced domain. My majority of the work deals with NLP. currently working at Virtusa as AI engineer exploring the depths of AI and enhancing my skillset everyday. providing buissiness solutions with AI. </p>
-    </div>
+        <br>
+        <p style="color: rgb(210, 206, 206);">links to know me more</p>
+        <div class="logos">
+          <img class="logo" (click)="redirect('https://www.kaggle.com/arvindvasa/code')" src="assets/189_Kaggle_logo_logos-1024.webp" alt="">
+          <img class="logo" (click)="redirect('https://www.hackerrank.com/profile/arvindvasa1122')" src="assets/hc.webp" alt="">
+          <img class="logo" (click)="redirect('https://github.com/ArvindVasa14')" src="assets/gh.png" alt="">
+          <img class="logo" (click)="redirect('https://www.linkedin.com/in/venkata-aravind-vasa-511644180/')" src="assets/linkedIn_PNG39.png" alt="">
+        </div>
+      </div>
       
       <img class="my-image" src="assets\1694719737741.jpeg" alt="arvind image" />
 </div>
@@ -24,7 +45,7 @@
 <p class="heading-tag">Take a look at some of the things I love working on</p>
 
 
-<div class="intrests-cards row">
+<div class="intrests-cards row" >
 <app-area-of-intrest-card class="intrests-card col-md-5 col-lg-4" id="areas-of-intrests"
   *ngFor="let intrest of areasOfIntrests"
   [technologyImageurl]="intrest.technologyImageUrl"
@@ -41,13 +62,18 @@
 <!-- MY LATEST PROJECTS -->
 <h3 class="heading-line" id="lastest-projects">My Latest Projects</h3>
 <p class="heading-tag">Take a look at my recent work</p>
-<div class="project-cards row">
+<div class="project-cards row" *ngIf="myLatestProjects">
   <app-my-latest-projects-card class="project-card col-md-5 col-lg-4"
     *ngFor="let project of myLatestProjects"
     [projectImageUrl]="project.projectImageUrl"
-    [projectDate]="project.projectDate"
     [projectHeading]="project.projectHeading"
     [projectDescription]="project.projectDescription"
     [projectUrl]="project.projectUrl"
   ></app-my-latest-projects-card>
 </div>
+
+<div *ngIf="!myLatestProjects">
+  <!-- Show a loading indicator or placeholder -->
+  <p>Loading...</p>
+</div>
+

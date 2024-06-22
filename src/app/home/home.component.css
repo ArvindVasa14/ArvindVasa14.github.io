@@ -6,7 +6,7 @@ body{
     padding-top: 10px;
     padding-left: 15px;
     width: 550px;
-    height: 550px;
+    height: auto;
     /* position: relative;
     transform: translate(70%, -50%); */
 }
@@ -59,26 +59,7 @@ body{
     padding: 40px;
 }
 
-.menu{
-    justify-content: left;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    padding-left: 180px;
-}
 
-.menu option{
-    padding-right: 60px;
-    padding-top: 23px;
-    color: rgb(240, 237, 237);
-    transition-duration: 0.2s;
-}
-.menu option:hover{
-    /* font-weight: bold; */
-    scale: 1.1;
-    transition-duration: 0.2s;
-    cursor: pointer;
-}
 .nav{
     position: absolute;
     color: white;
@@ -86,10 +67,56 @@ body{
 }
 
 .about{
-    padding-top: 3%;
+    padding-top: -1%;
     display: flex;
     align-items: center;
     
 }
 
+.list{
+    padding-top:22px ;
+    /* padding-left: 40px */
+}
+.list a, .list button{
+    color: white;
+}
 
+.button{
+    color: black
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    /* padding-left: 180px ; */
+}
+.menu a, .menu button{
+    padding-right: 60px;
+}
+
+.button{
+    padding-right:50px;
+}
+.menu li{
+    transition-duration: 0.2s;
+}
+
+.menu li:hover{
+    scale: 1.1;
+    transition-duration: 0.2s;
+}
+
+.logo{
+    width: auto;
+    height: 50px;
+    padding-left: 20px;
+    transition-duration: 0.2s;
+    /* padding-left: 20px; */
+
+}
+.logo:hover{
+    scale: 1.1;
+    /* padding-left: 20px; */
+    padding-right: 20px;
+    transition-duration: 0.2s;
+}

@@ -1,0 +1,28 @@
+[
+    {
+      "technologyName": "Natural Language Processing",
+      "technologyDescription": "In my extensive work with NLP, leveraging state-of-the-art techniques such as transformers and BERT, I've optimized language understanding tasks, achieving higher accuracy and efficiency in various applications.",
+      "technologyImageUrl": "assets/NLP.png"
+    },
+    {
+      "technologyName": "Machine Learning",
+      "technologyDescription": "Machine learning is more than an API call to sci-kit learn. I love the math and theory as well as the implementation. developed robust models that predict with high accuracy and leveraging advanced algorithms.",
+      "technologyImageUrl": "assets/ML.png"
+    },
+    {
+      "technologyName": "Web Development",
+      "technologyDescription": "I've honed my skills in building robust, scalable web applications using Java, Spring Boot, Angular, and RESTful APIs. My expertise includes seamless integration of front-end and back-end technologies.",
+      "technologyImageUrl": "assets/dev.png"
+    },
+    {
+      "technologyName": "Python",
+      "technologyDescription": "Working with Python from my graduation days, almost 4 years, I've grasped an immense amount of knowledge. I love using Python.",
+      "technologyImageUrl": "assets/python.png"
+    },
+    {
+      "technologyName": "Angular",
+      "technologyDescription": "Angular is my first choice for any frontend task; it became so addictive for me. I spent almost a year building frontends with Angular.",
+      "technologyImageUrl": "assets/angular.png"
+    }
+  ]
+  

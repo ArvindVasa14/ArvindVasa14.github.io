@@ -1,0 +1,26 @@
+[
+  {
+    "projectImageUrl": "assets/translatioin.png",
+    "projectHeading": "Neural Machine Translation",
+    "projectDescription": "Machine translation is achieved using sequence to sequence model architecture with and without attention. Limited training produced considerable results.",
+    "projectUrl": "https://github.com/ArvindVasa14/Neural-Machine-Translation"
+  },
+  {
+    "projectImageUrl": "assets/tegel.png",
+    "projectHeading": "Title Generation for article",
+    "projectDescription": "This text generation model generates a title based on the written article. An article must be provided as input to get a catchy and suitable title.",
+    "projectUrl": "https://github.com/ArvindVasa14/T5-finetuned-for-Medium-article-title-generation"
+  },
+  {
+    "projectImageUrl": "assets/imagecaptioning.png",
+    "projectHeading": "Image captioning",
+    "projectDescription": "The model uses pretrained VGG16 which is finetuned in last layers to extract the features from the image and feed that to an LSTM as its first hidden state, then LSTM generates word by word based on the previous generated words",
+    "projectUrl": "https://github.com/ArvindVasa14/Image-captioning"
+  },
+  {
+    "projectImageUrl": "assets/tweetsense.png",
+    "projectHeading": "TweetSense",
+    "projectDescription": "BERT finetuned is used to classify the text input based on the provided categories",
+    "projectUrl": "https://github.com/ArvindVasa14/TweetSense-with-BERT-FineTuned-"
+  }
+]

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommanServiceService } from '../comman-service.service';
 
 @Component({
   selector: 'app-my-latest-projects-card',
@@ -14,11 +15,13 @@ export class MyLatestProjectsCardComponent implements OnInit {
   @Input() projectDescription:string;
   @Input() projectUrl:string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service: CommanServiceService) { }
 
   ngOnInit(): void {
     console.log(this.projectHeading)
     console.log(this.projectUrl)
+    
+
   }
 
   redirect(url:string){

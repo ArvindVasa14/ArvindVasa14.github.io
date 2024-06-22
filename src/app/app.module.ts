@@ -14,6 +14,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { PdfDownloadService } from './pdf-download-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ContactComponent } from './contact/contact.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule, 
+    MatDividerModule, 
+    MatIconModule
   ],
   providers: [PdfDownloadService],
   bootstrap: [AppComponent]
